@@ -1,17 +1,32 @@
 import tkinter as tk
+import tkinter.filedialog
 
 window = tk.Tk()
-window.geometry('350x200') 
-window.title("Welcome to LikeGeeks app")
+window.geometry('1000x200') 
+window.title("TouchDesigner Mulit-Version Manager")
 
-lbl = tk.Label(window, text="Hello", font=("Arial Bold", 20))
-lbl.grid(column=0, row=0)
+header_font = ("Arial Bold", 20)
+dialogue_font = ("Arial", 12)
+
+install_header = tk.Label(window, text="Installs", font=header_font)
+install_header.grid(column=0, row=0, sticky='W', padx=5)
+
+my_machine = tk.Label(window, text="My Machine", font=dialogue_font)
+my_machine.grid(column=0, row=1, sticky='W', padx=5)
+
+official = tk.Label(window, text="Official Builds", font=dialogue_font)
+official.grid(column=0, row=2, sticky='W', padx=5)
+
+experimental = tk.Label(window, text="Experimental Builds", font=dialogue_font)
+experimental.grid(column=0, row=3, sticky='W', padx=5)
 
 def clicked():
-    lbl.configure(text="Button was clicked")
+    filePath = tk.filedialog.askopenfilename()
+    print(filePath)
+    return filePath
 
-btn = tk.Button(window, text="Click Here", command=clicked)
-btn.grid(column=1, row=0)
+btn = tk.Button(window, text="Select File", command=clicked)
+btn.grid(column=1, row=1)
 
 window.mainloop()
 
