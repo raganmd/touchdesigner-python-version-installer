@@ -1,0 +1,5 @@
+# dependencies
+__pycache__/*
+
+# mac files
+*.DS_STORE
