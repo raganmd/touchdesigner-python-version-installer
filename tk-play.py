@@ -4,15 +4,17 @@ import json
 import subprocess
 import TDInstallHelper
 
-left_highlight      = "#808B96"
-app_title           = "TouchDesigner Mulit-Version Manager"
-window_size         = "1000x200"
-header_font         = ("Arial Bold", 20)
-dialogue_font       = ("Arial", 12)
-btn_width           = 12
-installer_btn_txt   = "Select File"
-install_loc_txt     = "Select Location"
-install_txt         = "Install"
+left_highlight          = "#808B96"
+app_title               = "TouchDesigner Mulit-Version Manager"
+window_size             = "1000x200"
+header_font             = ("Arial Bold", 20)
+dialogue_font           = ("Arial", 12)
+btn_width               = 12
+installer_btn_txt       = "Select File"
+install_loc_txt         = "Select Location"
+install_txt             = "Install"
+raw_sub_p_cmd_str       = '{source} /extract {target}'.format(source=source, target=target)
+formatted_cmd_str       = None
 
 window = tk.Tk()
 
