@@ -3,12 +3,10 @@ import sys
 from argparse import ArgumentParser
 import subprocess
 
-
 def TD_updateder(source, target):
     # call string looks like
     # source_installer /extract target_dir
     installer_str       = "{source} /extract {target}".format(source=source, target=target)
-    print(installer_str)
     subprocess.call(installer_str)
     pass
 

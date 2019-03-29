@@ -13,8 +13,6 @@ btn_width               = 12
 installer_btn_txt       = "Select File"
 install_loc_txt         = "Select Location"
 install_txt             = "Install"
-raw_sub_p_cmd_str       = '{source} /extract {target}'.format(source=source, target=target)
-formatted_cmd_str       = None
 
 window = tk.Tk()
 
